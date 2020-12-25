@@ -1,0 +1,7 @@
+{
+    "tx-1": "tx",
+    "tx-2": "query",
+    "block": "query",
+    "blockchain": "blockchain",
+    "abci_query": "abci"
+}

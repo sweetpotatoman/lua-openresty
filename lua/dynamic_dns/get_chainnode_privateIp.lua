@@ -1,4 +1,4 @@
-local dnsrecord = require('/usr/local/openresty/nginx/lua/dnsrecord')
+local dnsrecord = require('/usr/local/openresty/nginx/lua/dynamic_dns/dnsrecord')
 
 local req_host = ngx.var.http_host
 

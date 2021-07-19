@@ -8,7 +8,7 @@ if err ~= nil then
     ngx.log(ngx.ERR,"limit_req.new fail: ", err)
 end
 
-local balance_table = require("/usr/local/openresty/nginx/lua/config_rules");
+local balance_table = require("/usr/local/openresty/nginx/lua/chainnode/config_rules");
 
 local data = ngx.req.get_body_data()
 local t = json_decode(data)

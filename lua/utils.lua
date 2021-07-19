@@ -1,10 +1,19 @@
 local json = require("cjson")
--- local limit_req = require('resty.limit.req')
+-- local http = require "resty.http"
 
 local _M = {}
 -- 将字符串转换为table,如果转换失败,则返回nil
 _M.json_decode = function(str) 
     local ok, t = pcall(json.decode, str)
+    if not ok then
+        return nil
+    end
+    return t
+end
+
+-- 将字符串转换为json,如果转换失败,则返回nil
+_M.json_encode = function(str) 
+    local ok, t = pcall(json.encode, str)
     if not ok then
         return nil
     end
@@ -29,5 +38,17 @@ end
 -- _M.new_limit_req = function(sharedict, rate, brust)
 --     return limit_req.new(sharedict, rate, brust)
 -- end
+-- local httpc = http.new();
+-- _M.request_uri = function(host, params)
+--     return httpc:request_uri(host, params)
+-- end
+
+_M.get_file_body = function(filename)
+    local f = assert(io.open(filename, 'r'))
+    local string = f:read("*all")
+    f:close()
+    return string
+end
+
 
 return _M

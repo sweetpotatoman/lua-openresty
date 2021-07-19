@@ -1,0 +1,7 @@
+{
+    "abci_query":[
+        "onemore/123",
+        "onemore/321"
+    ],
+    "genesis": "*"
+}

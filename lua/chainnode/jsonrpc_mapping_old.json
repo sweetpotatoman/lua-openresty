@@ -1,7 +1,7 @@
 {
-    "tx-1": "tx",
-    "tx-2": "query",
-    "block": "query",
-    "blockchain": "blockchain",
-    "abci_query": "abci"
+    "abci_query":[
+        "onemore/123",
+        "onemore/321"
+    ],
+    "genesis": "*"
 }

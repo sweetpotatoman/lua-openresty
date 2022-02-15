@@ -3,7 +3,7 @@ local json = require("cjson")
 
 local _M = {}
 -- 将字符串转换为table,如果转换失败,则返回nil
-_M.json_decode = function(str) 
+_M.json_decode = function(str)
     local ok, t = pcall(json.decode, str)
     if not ok then
         return nil
@@ -12,7 +12,7 @@ _M.json_decode = function(str)
 end
 
 -- 将字符串转换为json,如果转换失败,则返回nil
-_M.json_encode = function(str) 
+_M.json_encode = function(str)
     local ok, t = pcall(json.encode, str)
     if not ok then
         return nil
